@@ -21,4 +21,9 @@ fullpaint:
 	clang -std=c11 -Wall -pedantic -g fullpaint.c -o fullpaint \
 	    -fsanitize=undefined -fsanitize=address
 
+.PHONY: square
+square:
+	clang -std=c11 -Wall -pedantic -g square.c -o square \
+	    -fsanitize=undefined -fsanitize=address
+
 endif
