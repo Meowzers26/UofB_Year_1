@@ -30,4 +30,8 @@ square:
 interest:
 	clang $(OPTIONS) interest.c -o interest $(END)
 
+.PHONY: largestInt
+largestInt:
+	clang $(OPTIONS) largestInt.c -o largestInt $(END)
+
 endif
