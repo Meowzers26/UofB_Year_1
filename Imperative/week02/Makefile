@@ -17,16 +17,17 @@ else
 
 hello: hello.c
 	clang $(OPTIONS) hello.c -o hello $(END)
-	./hello
 
 .PHONY: fullpaint
 fullpaint:
 	clang $(OPTIONS) fullpaint.c -o fullpaint $(END)
-	./fullpaint
 
 .PHONY: square
 square:
 	clang $(OPTIONS) square.c -o square $(END)
-	./square
+
+.PHONY: interest
+interest:
+	clang $(OPTIONS) interest.c -o interest $(END)
 
 endif
