@@ -1,3 +1,6 @@
+OPTIONS = -std=c11 -Wall -pedantic -g
+END		= -fsanitize=undefined -fsanitize=address
+
 # Find the OS platform using the uname command.
 Linux := $(findstring Linux, $(shell uname -s))
 MacOS := $(findstring Darwin, $(shell uname -s))
@@ -13,17 +16,17 @@ hello: hello.c
 else
 
 hello: hello.c
-	clang -std=c11 -Wall -pedantic -g hello.c -o hello \
-	    -fsanitize=undefined -fsanitize=address
+	clang $(OPTIONS) hello.c -o hello $(END)
+	./hello
 
 .PHONY: fullpaint
 fullpaint:
-	clang -std=c11 -Wall -pedantic -g fullpaint.c -o fullpaint \
-	    -fsanitize=undefined -fsanitize=address
+	clang $(OPTIONS) fullpaint.c -o fullpaint $(END)
+	./fullpaint
 
 .PHONY: square
 square:
-	clang -std=c11 -Wall -pedantic -g square.c -o square \
-	    -fsanitize=undefined -fsanitize=address
+	clang $(OPTIONS) square.c -o square $(END)
+	./square
 
 endif
