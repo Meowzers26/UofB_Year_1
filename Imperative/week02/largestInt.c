@@ -1,4 +1,4 @@
-/* Find the limits of the int type */
+/* Find the upper limit of the int type */
 #include <stdio.h>
 
 int largestInt(int lower, long upper) {

@@ -34,4 +34,8 @@ interest:
 largestInt:
 	clang $(OPTIONS) largestInt.c -o largestInt $(END)
 
+.PHONY: smallestInt
+smallestInt:
+	clang $(OPTIONS) smallestInt.c -o smallestInt $(END)
+
 endif
