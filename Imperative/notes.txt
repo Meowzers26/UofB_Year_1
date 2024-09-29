@@ -1,0 +1,39 @@
+0 = false; 1 = true (any non-zero value is interpreted as true)
+
+
+if (expression) statement;
+else if (expression) statement;
+else statement;                      // optional else
+
+OR
+
+if (expression) { }                 // block can be used for mult expressions (no semicolon)
+
+
+procedure can be declared before being defined --> prototyping
+    - resolves mutual function calls, makes procedure ordering less of a problem
+
+
+most local scope takes precedence, shadowing identifier in more global scope
+
+
+swich tests integer expression against constant value
+
+swith (INT_EXPRESSION) {
+    case CONST_EXPRESSION1: STATEMENT1; break;
+    case CONST_EXPRESSION2: STATEMENT2; break;
+    ...
+    default:STATEMENTS
+}
+
+
+while (EXPRESSION) {
+    STATEMENTS;
+}
+
+
+#define _POSIX_C_SOURCE 200809L --> portable cross-platform interface
+c is portable but not platform-independent
+
+
+c does not detect overflow of arrays (referencing seq[3] when there are only 3 elements)
