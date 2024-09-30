@@ -1,7 +1,7 @@
 /* Find the lowest limit of the int type */
 #include <stdio.h>
 
-int smallestInt(int lower, long upper) {
+int smallestInt(long lower, int upper) {
 	long current = lower + ((upper - lower) / 2);
 	int test = current;
 
