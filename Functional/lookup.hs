@@ -22,12 +22,19 @@
 
 
 -- types:
--- Int(eger) (diff sizes) -> the type of integers
--- String -> text (double quotation marks)
--- Bool -> booleans
--- Char -> single character (single quotation marks)
--- tuples = (Integer, String) -> format for typing tuples
--- lists = [1, 2, 3]
+-- Int(eger) (diff sizes)   -> the type of integers
+-- String                   -> text (double quotation marks)
+-- Bool                     -> booleans
+-- Char                     -> single character (single quotation marks)
+-- tuples                   = (Integer, String) -> format for typing tuples
+-- lists                    = [1, 2, 3]
+-- a                        -> any one type
+
+-- type classes:    (can create your own)
+-- Num a                    -> any numeric type
+-- Eq a                     -> to compare things (not functions)
+-- Ord a                    -> comparison wherein order is important
+-- (Num a) =>               -> for any type Num a, (type class)
 
 -- type error when expected type and actual type do not match
 

@@ -37,3 +37,26 @@ c is portable but not platform-independent
 
 
 c does not detect overflow of arrays (referencing seq[3] when there are only 3 elements)
+
+
+'O' notation:
+-- keeps most significant term
+-- discards coefficients
+    -- an => n => O(n)
+
+
+1 bit       = 1 binary digit
+1 byte      = 8 bits
+            = 2 hexadecimal digits
+1 nibble    = 4 bits
+            = 1 hexadecimal digit (0000 (0) - 1111 (15))
+1 short     = 2 bytes
+            = 4 hexadecimal digits
+
+*when writing hex literals, prepend 0x
+
+during overflow, byte becomes 0. similarly, underflow will cause byte to become 255.
+
+signed char: can be negative
+    -- leftmost bit reserved for sign (0 for positive, 1 for nrgative)
+    -- flip every bit of the positive number (binary) then add 1
