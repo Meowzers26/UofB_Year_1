@@ -10,11 +10,15 @@
 
 -- :l load new file         (one argument)
 -- :r reload                (no arguments)
+-- :t check type
 -- fst [tuple]              takes the first component
 -- snd [tuple]              takes the second component
 -- "_"                      a hole for placeholder, tells us what type should go there (won't compile)
 -- lowercase types (a0)     type doesn't matter / is ambiguous
 -- functions                argument -> argument -> return
+-- import [library] hiding [function]
+-- Show                     turns output into String
+-- error " "
 
 
 -- ⚠️RECURSION⚠️
@@ -29,18 +33,30 @@
 -- tuples                   = (Integer, String) -> format for typing tuples
 -- lists                    = [1, 2, 3]
 -- a                        -> any one type
+-- Maybe                    -> for error handling
+                            -> data Maybe a = Just a | Nothing 
+                            
 
 -- type classes:    (can create your own)
 -- Num a                    -> any numeric type
 -- Eq a                     -> to compare things (not functions)
 -- Ord a                    -> comparison wherein order is important
 -- (Num a) =>               -> for any type Num a, (type class)
+-- creating custom type     -> type [name] = [type]
+-- creating data type       -> data [name] = [constructor (capital letter strart)] [types]      (can use constructor for pattern matching)
+    -- egUser' = MkUser' 20 "Greg"
+    -- getAge (MkUser' age name) = age
+
+    -- data Bool = True | False
 
 -- type error when expected type and actual type do not match
+-- data constructors can determine type 
+    -- data [name] = [constructor] [types] | [constructor] [types]
+    -- data User = MkUser Int String | Anon Cookie
 
 
 -- thingy thing things
 -- (:)          takes two arguments, one on left one on right
 --              adds something to the front of a list
 --              True : (False : [])     =   True : False : []   ->      [True, False]
--- (.)          append functions
+-- (.)          function composition
