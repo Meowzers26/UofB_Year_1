@@ -39,6 +39,11 @@ c is portable but not platform-independent
 c does not detect overflow of arrays (referencing seq[3] when there are only 3 elements)
 
 
+'O' notation:
+-- keeps most significant term
+-- discards coefficients
+    -- an => n => O(n)
+
 
 char c = 'A';
 printf(%c %hhi\n, c, c);     will print "A 65"
@@ -52,3 +57,43 @@ ASCII numbers:
 strings are arrays of chars (in their ASCII codes, single quote chars, or full string in double quotes (automatically adds null character)) that ends with null character
 char textA[3] = {72, 105,0};
 printf("%s\n", textA);      will print "hi"
+
+
+1 bit       = 1 binary digit
+1 byte      = 8 bits
+            = 2 hexadecimal digits
+1 nibble    = 4 bits
+            = 1 hexadecimal digit (0000 (0) - 1111 (15))
+1 short     = 2 bytes
+            = 4 hexadecimal digits
+
+*when writing hex literals, prepend 0x
+
+during overflow, byte becomes 0. similarly, underflow will cause byte to become 255.
+
+signed char: can be negative
+    -- leftmost bit reserved for sign (0 for positive, 1 for nrgative)
+    -- flip every bit of the positive number (binary) then add 1
+
+Two's complement arithmetic
+
+*-128 has no positive complement
+-128    = 10000000
+        = 01111111 + 00000001
+        = 10000000
+        = -128
+
+2^8     = 256 values can be stored in 8 bit signed char (-128 -- +127)
+2^16    = 16 bit short
+2^32    = 32 bit int
+2^64    = 64 bit long
+^^ may vary by platform
+
+
+printing codes:
+
+%…x stands for printing in hex
+    -- %2x indicates that two hex digits (=2 Nibbles) are to be printed
+    -- %02x means to print leading zeros instead of spaces.
+• Thus, for 1, 2, 4, 8 byte integers, use %02x, %04x, %08x,
+%016lx (where the letter l is added for long arguments).
