@@ -60,3 +60,26 @@ during overflow, byte becomes 0. similarly, underflow will cause byte to become 
 signed char: can be negative
     -- leftmost bit reserved for sign (0 for positive, 1 for nrgative)
     -- flip every bit of the positive number (binary) then add 1
+
+Two's complement arithmetic
+
+*-128 has no positive complement
+-128    = 10000000
+        = 01111111 + 00000001
+        = 10000000
+        = -128
+
+2^8     = 256 values can be stored in 8 bit signed char (-128 -- +127)
+2^16    = 16 bit short
+2^32    = 32 bit int
+2^64    = 64 bit long
+^^ may vary by platform
+
+
+printing codes:
+
+%…x stands for printing in hex
+    -- %2x indicates that two hex digits (=2 Nibbles) are to be printed
+    -- %02x means to print leading zeros instead of spaces.
+• Thus, for 1, 2, 4, 8 byte integers, use %02x, %04x, %08x,
+%016lx (where the letter l is added for long arguments).
