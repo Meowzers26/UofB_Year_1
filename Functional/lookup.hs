@@ -39,7 +39,8 @@
 -- type error when expected type and actual type do not match
 
 
--- LISTS
+-- thingy thing things
 -- (:)          takes two arguments, one on left one on right
 --              adds something to the front of a list
 --              True : (False : [])     =   True : False : []   ->      [True, False]
+-- (.)          append functions

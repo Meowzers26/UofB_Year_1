@@ -45,6 +45,20 @@ c does not detect overflow of arrays (referencing seq[3] when there are only 3 e
     -- an => n => O(n)
 
 
+char c = 'A';
+printf(%c %hhi\n, c, c);     will print "A 65"
+
+ASCII numbers:
+48 -- 57        = 0 -- 9
+65 -- 90        = uppercase letters
+97 -- 122       = lowercase letters
+\0              = the null character (ASCII code 0, not 48)
+
+strings are arrays of chars (in their ASCII codes, single quote chars, or full string in double quotes (automatically adds null character)) that ends with null character
+char textA[3] = {72, 105,0};
+printf("%s\n", textA);      will print "hi"
+
+
 1 bit       = 1 binary digit
 1 byte      = 8 bits
             = 2 hexadecimal digits
