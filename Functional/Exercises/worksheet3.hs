@@ -74,6 +74,4 @@ addTwo x = x + 2
 
 -- 3.2
 -- a)
-data choices    = Rock String 
-                | Paper String 
-                | Scissors String
+data choices    = Rock | Paper | Scissors

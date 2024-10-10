@@ -13,12 +13,16 @@
 -- :t check type
 -- fst [tuple]              takes the first component
 -- snd [tuple]              takes the second component
--- "_"                      a hole for placeholder, tells us what type should go there (won't compile)
+-- _                      a hole for placeholder, don't care about the value
 -- lowercase types (a0)     type doesn't matter / is ambiguous
 -- functions                argument -> argument -> return
 -- import [library] hiding [function]
 -- Show                     turns output into String
--- error " "
+-- error " "                retruns an error, use rarely
+-- main ::                  entrypoint to program
+-- ghc [file name]          compiles file
+-- :: IO ()                 needed if function interacts with console/computer
+-- main = do                execute code sequentially
 
 
 -- ⚠️RECURSION⚠️
@@ -41,7 +45,7 @@
 -- Num a                    -> any numeric type
 -- Eq a                     -> to compare things (not functions)
 -- Ord a                    -> comparison wherein order is important
--- (Num a) =>               -> for any type Num a, (type class)
+-- (Num a) =>               -> for any type Num a, (type class) when creating a function
 -- creating custom type     -> type [name] = [type]
 -- creating data type       -> data [name] = [constructor (capital letter strart)] [types]      (can use constructor for pattern matching)
     -- egUser' = MkUser' 20 "Greg"
@@ -56,7 +60,13 @@
 
 
 -- thingy thing things
--- (:)          takes two arguments, one on left one on right
---              adds something to the front of a list
---              True : (False : [])     =   True : False : []   ->      [True, False]
--- (.)          function composition
+-- (:)              takes two arguments, one on left one on right
+--                  adds something to the front of a list
+--                  True : (False : [])     =   True : False : []   ->      [True, False]
+-- (.)              function composition
+-- putStrLn ""      prints string to console
+--                  only works for function of type IO ()
+--                  only prints characters in string w/o quotation marks
+--                  String -> IO ()
+-- print            converts to string, and prints that 
+                    Show a => a -> IO ()
