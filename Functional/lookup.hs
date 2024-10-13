@@ -6,6 +6,7 @@
 --      | (condition) -> in this case... (replaces if and else if)
 --      = -> replaces then
 --      | otherwise -> replaces else
+-- variables are immutable
 
 
 -- :l load new file         (one argument)
@@ -13,7 +14,7 @@
 -- :t check type
 -- fst [tuple]              takes the first component
 -- snd [tuple]              takes the second component
--- _                      a hole for placeholder, don't care about the value
+-- _                        a hole for placeholder, don't care about the value
 -- lowercase types (a0)     type doesn't matter / is ambiguous
 -- functions                argument -> argument -> return
 -- import [library] hiding [function]
@@ -22,7 +23,6 @@
 -- main ::                  entrypoint to program
 -- ghc [file name]          compiles file
 -- :: IO ()                 needed if function interacts with console/computer
--- main = do                execute code sequentially
 
 
 -- ⚠️RECURSION⚠️
@@ -38,7 +38,7 @@
 -- lists                    = [1, 2, 3]
 -- a                        -> any one type
 -- Maybe                    -> for error handling
-                            -> data Maybe a = Just a | Nothing 
+--                          -> data Maybe a = Just a | Nothing 
                             
 
 -- type classes:    (can create your own)
@@ -60,13 +60,16 @@
 
 
 -- thingy thing things
--- (:)              takes two arguments, one on left one on right
---                  adds something to the front of a list
---                  True : (False : [])     =   True : False : []   ->      [True, False]
--- (.)              function composition
--- putStrLn ""      prints string to console
---                  only works for function of type IO ()
---                  only prints characters in string w/o quotation marks
---                  String -> IO ()
--- print            converts to string, and prints that 
-                    Show a => a -> IO ()
+-- (:)                      takes two arguments, one on left one on right
+--                          adds something to the front of a list
+--                          True : (False : [])     =   True : False : []   ->      [True, False]
+-- (.)                      function composition
+-- putStrLn ""              prints string to console
+--                          only works for function of type IO ()
+--                          only prints characters in string w/o quotation marks
+--                          String -> IO ()
+-- print                    converts to string, and prints that 
+--                          Show a => a -> IO ()
+--  (<-)                    assign variable
+-- getLine                  take input from console
+-- [func name] = do         execute code sequentially

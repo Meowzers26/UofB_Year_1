@@ -138,6 +138,7 @@ lecture 11:
 
 -pointers can reference an address
 - pointers are variables, have its own address (8 bytes on 64-bit system)
-    - int *p;       // pointer for type int, type int is the value that p is pointing at (*)
+    - int *p;       // intializes the value of the pointer p as an int
     - p = &k        // ampersand refers to address of variable
+    - int* p;       // initializes pointer variable of type in called p
 - points to random integer when not initialised
