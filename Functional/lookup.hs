@@ -60,8 +60,8 @@
 
 
 -- thingy thing things
--- (:)                      takes two arguments, one on left one on right
---                          adds something to the front of a list
+-- (:)                      prepends first argument a to second argument [a]
+-- (++)                     concatenates two lists [a] to [a]
 --                          True : (False : [])     =   True : False : []   ->      [True, False]
 -- (.)                      function composition
 -- putStrLn ""              prints string to console
@@ -69,7 +69,11 @@
 --                          only prints characters in string w/o quotation marks
 --                          String -> IO ()
 -- print                    converts to string, and prints that 
+--                          putStrLn $ Show " "
 --                          Show a => a -> IO ()
 --  (<-)                    assign variable
 -- getLine                  take input from console
--- [func name] = do         execute code sequentially
+-- [function] = do          execute code sequentially
+-- case [variable] of       try case statement
+--      "  " -> [action]
+-- [variable] <- IO [type]  take out the type from the IO type   
