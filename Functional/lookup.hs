@@ -9,6 +9,12 @@
 -- variables are immutable
 
 
+-- Higher Order (HO) functions take other functions as parameters
+    -- for abstraction
+    -- modular, less cognitive load
+-- 
+
+
 -- :l load new file         (one argument)
 -- :r reload                (no arguments)
 -- :t check type
@@ -77,3 +83,43 @@
 -- case [variable] of       try case statement
 --      "  " -> [action]
 -- [variable] <- IO [type]  take out the type from the IO type   
+-- \x y -> [function]       function without name that takes in input x and y
+                            don't case arguments when pattern matching, just take out variables
+-- (+2)                     shorthand for (\x -> x + 2)
+-- (,)                      shorthand for (\x y -> (x, y))
+-- map                      maps x from a list to f(x) in another list
+
+
+
+-- HO Function example:
+
+filter :: (a -> Bool) -> [a] -> [a]
+filter p [] = []
+filter p (x:xs)
+  | p x         = x : filter xs
+  | otherwise   = filter xs
+
+filterOdd :: [Int] -> [Int]
+filterOdd xs    = filter odd xs
+
+onlyA :: [Char] -> [Char]
+onlyA xs        = filter isA xs
+  where
+    isA :: Char -> Bool
+    isA x       = x == 'A'
+
+onlyA' xs = filter (\x -> x == 'A') xs          -- anon functions / lambda
+
+onlyA'' xs = filter (== 'A') xs
+
+
+
+map :: (a -> b) -> [a] -> [b]
+map f []        = []
+map f (x:xs)    = f x : map xs
+
+mapPlusTwo :: [Int] -> [Int]
+mapPlusTwo xs = map (+2) xs
+
+mapShow :: [Char] -> [Char]
+mapShow xs = map show xs

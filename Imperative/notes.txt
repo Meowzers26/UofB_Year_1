@@ -160,3 +160,18 @@ lecture 12:
 - typedefs:
 - rename struct foo to just Foo       (otherwise, struct foo has to be written everytime it is called)
     typedef struct foo Foo;
+
+- read only access:
+    typedef struct foo const Foo;
+
+- combined declaration + alias:
+    typedef struct foo {} Foo;
+
+- sizeof(foo) to calculate size of struct
+
+- pointers:
+- pass-by-reference
+    [struct name]->[field]      // shorthand for (*i).x
+
+
+lecture 13:
