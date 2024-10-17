@@ -142,3 +142,21 @@ lecture 11:
     - p = &k        // ampersand refers to address of variable
     - int* p;       // initializes pointer variable of type in called p
 - points to random integer when not initialised
+
+
+lecture 12:
+- group primitives into structures:     access information/variables as a single 'object'
+                                        i.e. video game character w position, velocity
+- values can be grouped together w a struct
+- to declare structs:
+        struct item pos {               // now variable pos has two fields, x and y
+            int x, y;
+        };
+- to access:
+        pos.x;                          // dot notation
+        (like in unity <3)
+- structs are passed-by-value, can be returned
+
+- typedefs:
+- rename struct foo to just Foo       (otherwise, struct foo has to be written everytime it is called)
+    typedef struct foo Foo;
